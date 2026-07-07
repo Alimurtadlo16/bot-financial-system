@@ -1,3 +1,7 @@
+from telegram import Update
+from telegram.ext import Application, CommandHandler, ContextTypes
+
+
 class PengeluaranHarian:
     def __init__(self, name, saldoAwal):
         self.__name = name
@@ -31,3 +35,25 @@ async def keluar_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     angka_input = int(context.args[0])
     saldo_terbaru = myDompetGuweh.penguranganTransaksi(angka_input)
     await update.message.reply_text(f"Saldo terbaru: {saldo_terbaru}")
+
+
+async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "Halo Ali Murtadlo! Bot Finansial lo udah siap. Pake ./set --nominal-- buat mulai ya!"
+    )
+
+
+def main():
+    TOKEN = "8764486282:AAFB5bPYXFbKJPdUp9Y5JmAedDLXpkGBPgU"
+
+    application = Application.builder().token(TOKEN).build()
+    application.add_handler(CommandHandler("start", start_command))
+    application.add_handler(CommandHandler("set", set_saldo_command))
+    application.add_handler(CommandHandler("keluar", keluar_command))
+
+    print("Bot lo udah standby, Li! Silakan tes di Telegram...")
+    application.run_polling()
+
+
+if __name__ == "__main__":
+    main()
