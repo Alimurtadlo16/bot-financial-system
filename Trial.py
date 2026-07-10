@@ -76,7 +76,7 @@ async def baca_pengeluaran(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("🤖 Gue cuma paham angka murni sekarang, Li. Ketik nominal pengeluaran lo aja (contoh: `10000`).")
 
 def main():
-    TOKEN = "8764486282:AAFB5bPYXFbKJPdUp9Y5JmAedDLXpkGBPgU"
+    TOKEN = "8764486282:AAFB5bPYXFbKJPdUzsdvdsvgsdgsdgp9Y5JmAedDLXpkGBPgU"
     
     print("Bot versi 2 sedang berjalan...")
     app = Application.builder().token(TOKEN).build()
