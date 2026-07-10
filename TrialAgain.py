@@ -44,7 +44,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
-    TOKEN = "8764486282:AAFB5bPYXFbKJPdUp9Y5JmAedDLXpkGBPgU"
+    TOKEN = "8764486282:AAFB5bPYXFbKJPdUp9Y5JmAedscfsdfbsgsdDLXpkGBPgU"
     application = Application.builder().token(TOKEN).build()
     application.add_handler(CommandHandler("start", start_command))
     application.add_handler(CommandHandler("set", set_saldo_command))
