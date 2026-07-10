@@ -32,7 +32,7 @@ class FinancialBot:
 
 if __name__ == "__main__":
     # GANTI STRING DI BAWAH INI PAKE TOKEN LO
-    TOKEN = "8764486282:AAFB5bPYXFbKJPdUp9Y5JmAedDLXpkGBPgU"
+    TOKEN = "8764486282:AAFB5bPYXFbKJPdUasxAZxXaSaxASp9Y5JmAedDLXpkGBPgU"
 
     bot = FinancialBot(TOKEN)
     bot.run()
