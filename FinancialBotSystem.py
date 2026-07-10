@@ -1,6 +1,7 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
+
 class FinancialBot:
     def __init__(self, token: str):
         # Constructor: Inisialisasi bot dengan token lo
@@ -23,9 +24,15 @@ class FinancialBot:
         print("Bot lagi jalan, Li... Coba chat /start di Telegram!")
         self.application.run_polling()
 
-if __name__ == '__main__':
+    def stop(self):
+        # Hentikan bot
+        self.application.stop()
+        print("Bot sudah berhenti.")
+
+
+if __name__ == "__main__":
     # GANTI STRING DI BAWAH INI PAKE TOKEN LO
     TOKEN = "8764486282:AAFB5bPYXFbKJPdUp9Y5JmAedDLXpkGBPgU"
-    
+
     bot = FinancialBot(TOKEN)
     bot.run()
