@@ -50,7 +50,7 @@ class FinancialBot:
 
 
 if __name__ == "__main__":
-    TOKEN = "8764486282:AAFB5bPYXFbKJPdUp9Y5JmAedDLXpkGBPgU"
+    TOKEN = "8764486282:AAFB5bPYXFZXXaceasfasdgdsvbKJPdUp9Y5JmAedDLXpkGBPgU"
 
     bot = FinancialBot(TOKEN)
     bot.run()
